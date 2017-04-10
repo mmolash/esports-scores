@@ -14,3 +14,4 @@ This route registers a device ID on a mongoose database. This was used for a spe
 
 # notes
 node-modules is included because this app uses a modified version of a node module, which is not available via npm. Therefore, using this copy of node-modules is important for functionality.
+However, to reduce size, you still need to run npm install to get the remaining modules from npm.

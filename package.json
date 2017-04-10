@@ -13,7 +13,6 @@
   },
   "main": "index.js",
   "dependencies": {
-    "gosugamers-matches": ">=3.0.0",
     "node-static": ">=0.1.2",
     "express": "~4.0.0",
     "mongoose" : "~3.8.8",
