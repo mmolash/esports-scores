@@ -1,7 +1,7 @@
 var matchScraper = require('./matchScraper');
 var MongoClient = require('mongodb').MongoClient;
 
-var uri = "mongodb://mmolash:*7rash*7@ds061621.mongolab.com:61621/csgoscores";
+var uri = "";
 
 function upcomingMatches(RouteData) {
     console.log("Request handler 'matchScraper' was called....");
