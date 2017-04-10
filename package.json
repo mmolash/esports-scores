@@ -1,0 +1,29 @@
+{
+  "name": "matchscraper",
+  "version": "0.0.1",
+  "description": "Grabs CS:GO match info",
+  "author": "Michael Molash <molash.michael@gmail.com>",
+  "bin": {
+    "module-name": "./bin/module-name"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "predeploy": "echo im about to deploy",
+    "postdeploy": "echo ive deployed"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "gosugamers-matches": ">=3.0.0",
+    "node-static": ">=0.1.2",
+    "express": "~4.0.0",
+    "mongoose" : "~3.8.8",
+    "connect": "~2.14.4",
+    "request": "2.36.0",
+    "node-gcm": "0.10.0",
+    "mongodb": "~2.0"
+  },
+  "preferGlobal": true,
+  "private": true,
+  "analyze": true,
+  "license": "MIT"
+}
