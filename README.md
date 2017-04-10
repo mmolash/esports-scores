@@ -1,46 +1,16 @@
-# gosugamers-matches
+# esports-scores
+A node.js based web scraper that pulls professional esports scores from gosugamers and returns it in JSON format. Used for an Android application that showed scores to users.
 
-[![Build Status][travis-svg]][travis]
-[![Dependency Status][gemnasium-svg]][gemnasium]
+# routes
+By default, this server is hosted on port 8888. It has four routes:
+### /upcomingMatches
+This route will pull any future matches as available on gosugamers
+### /currentMatches
+This route will only return any ongoing matches
+### /previousMatches
+This route returns previous matches in addition to their results
+### /register
+This route registers a device ID on a mongoose database. This was used for a specific function in an app that made use of this.
 
-Get information on every match on a page of GosuGamer's match history.
-
-## Example
-
-``` javascript
-var gosugamersMatches = require('gosugamers-matches');
-
-gosugamersMatches(1, 'counterstrike', function(error, data) {
-  if (error) {
-    throw error;
-  }
-
-  // => `data` is _Array_ of _Objects_ from gosugamers-match
-});
-```
-
-## Installation
-
-``` bash
-$ npm install gosugamers-matches
-```
-
-## API
-
-``` javascript
-var gosugamersMatches = require('gosugamers-matches');
-```
-
-### `gosugamersMatches(page, game, callback)`
-
-Given _Number_ `page`, _String_ `game`, and _Function_ `callback`, calls
-`callback(error, data)`, where `error` is any _Error_ encountered and _Array_
-`data` contains information on every match on page `page` of GosuGamers's match
-history for `game`. Information is parsed by
-[gosugamers-match](https://github.com/KenanY/gosugamers-match).
-
-
-   [travis]: https://travis-ci.org/KenanY/gosugamers-matches
-   [travis-svg]: https://img.shields.io/travis/KenanY/gosugamers-matches.svg
-   [gemnasium]: https://gemnasium.com/KenanY/gosugamers-matches
-   [gemnasium-svg]: https://img.shields.io/gemnasium/KenanY/gosugamers-matches.svg
+# notes
+node-modules is included because this app uses a modified version of a node module, which is not available via npm. Therefore, using this copy of node-modules is important for functionality.
